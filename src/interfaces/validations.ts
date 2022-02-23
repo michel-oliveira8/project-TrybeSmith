@@ -39,7 +39,7 @@ const validateLevel = (level:number): CodeResponse => {
   if (typeof level !== 'number') {
     return { code: StatusCode.UNPROCCESSABLE_ENTITY, error: MSG.LEVEL_TYPE_NUMBER };
   }
-  
+
   return {};
 };
 
@@ -57,9 +57,21 @@ const validatePassword = (password: string): CodeResponse => {
   return {};
 };
 
+const validateLogin = (username: string, password: string): CodeResponse => {
+  if (!username) {
+    return { code: StatusCode.BAD_REQUEST, error: MSG.USERNAME_REQUIRED };
+  }
+  if (!password) {
+    return { code: StatusCode.BAD_REQUEST, error: MSG.PASSWORD_REQUIRED };
+  }
+
+  return {};
+};
+
 export default {
   validateUsername,
   validateClasse,
   validateLevel,
   validatePassword,
+  validateLogin,
 };

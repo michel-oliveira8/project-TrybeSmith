@@ -28,6 +28,23 @@ const validateUser = (req: Request, res: Response, next: NextFunction) => {
   next();
 };
 
+const validateLogin = (req: Request, res: Response, next: NextFunction) => {
+  const { username, password } = req.body as User;
+
+  const validationsUsername = validations.validateUsername(username);
+  if (validationsUsername.code) {
+    return res.status(validationsUsername.code).json({ error: validationsUsername.error });
+  }
+
+  const validationsPassword = validations.validatePassword(password);
+  if (validationsPassword.code) {
+    return res.status(validationsPassword.code).json({ error: validationsPassword.error });
+  }
+
+  next();
+};
+
 export default {
   validateUser,
+  validateLogin,
 };
