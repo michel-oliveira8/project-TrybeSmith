@@ -1,8 +1,9 @@
 import * as jwt from 'jsonwebtoken';
+import { Payload } from '../interfaces/user';
 
 const secret = 'seusecretdetoken';
 
-const token = (payload: string) => {
+const token = (payload: Payload) => {
   const createToken = jwt.sign(payload, secret, { algorithm: 'HS256', expiresIn: '7d' });
   return createToken;
 };

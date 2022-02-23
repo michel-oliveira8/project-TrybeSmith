@@ -19,3 +19,8 @@ export interface EncodeResult {
   expiresIn: number;
   algorithm: string;
 }
+
+export interface Payload {
+  id: number;
+  username: string;
+}

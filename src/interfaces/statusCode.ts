@@ -14,7 +14,7 @@ export enum MSG {
   USERNAME_REQUIRED = 'Username is required',
   USERNAME_TYPE_STRING = 'Username must be a string',
   USERNAME_LENGTH = 'Username must be longer than 2 characters',
-  CLASSE_REQUIRED = 'classe is required',
+  CLASSE_REQUIRED = 'Classe is required',
   CLASSE_TYPE_STRING = 'Classe must be a string',
   CLASSE_LENGTH = 'Classe must be longer than 2 characters',
   LEVEL_REQUIRED = 'Level is required',

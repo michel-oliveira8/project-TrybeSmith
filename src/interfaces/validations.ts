@@ -30,16 +30,16 @@ const validateClasse = (classe: string): CodeResponse => {
 };
 
 const validateLevel = (level:number): CodeResponse => {
+  if (level <= 0) {
+    return { code: StatusCode.UNPROCCESSABLE_ENTITY, error: MSG.LEVEL_GREATER_THAN_ZERO };
+  }
   if (!level) {
     return { code: StatusCode.BAD_REQUEST, error: MSG.LEVEL_REQUIRED };
   }
   if (typeof level !== 'number') {
     return { code: StatusCode.UNPROCCESSABLE_ENTITY, error: MSG.LEVEL_TYPE_NUMBER };
   }
-  if (level < 0) {
-    return { code: StatusCode.UNPROCCESSABLE_ENTITY, error: MSG.LEVEL_GREATER_THAN_ZERO };
-  }
-
+  
   return {};
 };
 
