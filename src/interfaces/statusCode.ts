@@ -11,7 +11,7 @@ export enum StatusCode {
 }
 
 export enum MSG {
-  USERNAME_REQUIRED = 'Username must be a string',
+  USERNAME_REQUIRED = 'Username is required',
   USERNAME_TYPE_STRING = 'Username must be a string',
   USERNAME_LENGTH = 'Username must be longer than 2 characters',
   CLASSE_REQUIRED = 'classe is required',

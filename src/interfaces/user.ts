@@ -6,10 +6,16 @@ export interface User {
 }
 
 export interface UserWithId extends User {
-  id: number,
+  id: number;
 }
 
 export interface CodeResponse {
-  code?: number
-  error?: string
+  code?: number;
+  error?: string;
+}
+
+export interface EncodeResult {
+  token: string;
+  expiresIn: number;
+  algorithm: string;
 }
