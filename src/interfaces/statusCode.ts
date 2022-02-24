@@ -23,4 +23,5 @@ export enum MSG {
   PASSWORD_REQUIRED = 'Password is required',
   PASSWORD_TYPE_STRING = 'Password must be a string',
   PASSWORD_LENGTH = 'Password must be longer than 7 characters',
+  USERNAME_OR_PASSWORD_INVALID = 'Username or password invalid',
 }

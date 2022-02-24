@@ -24,3 +24,14 @@ export interface Payload {
   id: number;
   username: string;
 }
+
+export interface PayloadLogin {
+  id: number,
+  username: string,
+  password: string,
+}
+
+export interface Login {
+  username: string,
+  password: string,
+}

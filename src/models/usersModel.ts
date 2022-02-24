@@ -1,12 +1,12 @@
-import { ResultSetHeader } from 'mysql2';
-import { User, UserWithId } from '../interfaces/user';
+import { ResultSetHeader, RowDataPacket } from 'mysql2';
+import { Login, User, UserWithId } from '../interfaces/user';
 import connection from './connection';
 
 const create = async (user: User): Promise<UserWithId> => {
   const { username, classe, level, password } = user;
-  const sql = 'INSERT INTO Trybesmith.Users (username,classe,level,password) VALUES (?,?,?,?)';
+  const query = 'INSERT INTO Trybesmith.Users (username,classe,level,password) VALUES (?,?,?,?)';
   const [result] = await connection
-    .execute<ResultSetHeader>(sql, [username, classe, level, password]);
+    .execute<ResultSetHeader>(query, [username, classe, level, password]);
   const { insertId: id } = result;
 
   const IdUser: UserWithId = { id, username, classe, level, password };
@@ -14,6 +14,17 @@ const create = async (user: User): Promise<UserWithId> => {
   return IdUser;
 };
 
+const login = async (loginUser: Login): Promise<UserWithId> => {
+  const { username, password } = loginUser;
+  const query = 'SELECT * FROM Trybesmith.Users WHERE USERNAME = ? AND PASSWORD = ?';
+  const [result] = await connection.execute<RowDataPacket[]>(query, [username, password]);
+  
+  const [row] = result as UserWithId[];
+  
+  return row;
+};
+
 export default {
   create,
+  login,
 };
