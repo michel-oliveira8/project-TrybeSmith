@@ -68,10 +68,40 @@ const validateLogin = (username: string, password: string): CodeResponse => {
   return {};
 };
 
+const validateName = (name: string): CodeResponse => {
+  if (!name) {
+    return { code: StatusCode.BAD_REQUEST, error: MSG.NAME_REQUIRED };
+  }
+  if (typeof name !== 'string') {
+    return { code: StatusCode.UNPROCCESSABLE_ENTITY, error: MSG.NAME_STRING };
+  }
+  if (name.length <= 2) {
+    return { code: StatusCode.UNPROCCESSABLE_ENTITY, error: MSG.NAME_LENGTH };
+  }
+
+  return {};
+};
+
+const validateAmount = (amount: string): CodeResponse => {
+  if (!amount) {
+    return { code: StatusCode.BAD_REQUEST, error: MSG.AMOUNT_REQUIRED };
+  }
+  if (typeof amount !== 'string') {
+    return { code: StatusCode.UNPROCCESSABLE_ENTITY, error: MSG.AMOUNT_STRING };
+  }
+  if (amount.length <= 2) {
+    return { code: StatusCode.UNPROCCESSABLE_ENTITY, error: MSG.AMOUNT_LENGTH };
+  }
+
+  return {};
+};
+
 export default {
   validateUsername,
   validateClasse,
   validateLevel,
   validatePassword,
   validateLogin,
+  validateName,
+  validateAmount,
 };

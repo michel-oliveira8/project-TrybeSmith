@@ -26,4 +26,10 @@ export enum MSG {
   USERNAME_OR_PASSWORD_INVALID = 'Username or password invalid',
   TOKEN_NOT_FOUND = 'Token not found',
   TOKEN_INVALID = 'Invalid token',
+  NAME_REQUIRED = 'Name is required',
+  NAME_STRING = 'Name must be a string',
+  NAME_LENGTH = 'Name must be longer than 2 characters',
+  AMOUNT_REQUIRED = 'Amount is required',
+  AMOUNT_STRING = 'Amount must be a string',
+  AMOUNT_LENGTH = 'Amount must be longer than 2 characters',
 }

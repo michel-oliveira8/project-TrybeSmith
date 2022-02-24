@@ -13,6 +13,6 @@ app.post('/login', validations.validateLogin, usersController.login);
 
 app.use(authorization.authorizationToken);
 
-app.post('/products');
+app.post('/products', validations.validateProducts);
 
 export default app;
