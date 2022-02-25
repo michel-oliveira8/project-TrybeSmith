@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from 'express';
-import { Products, User } from '../interfaces/interface';
+import { Order, Products, User } from '../interfaces/interface';
 import validations from '../interfaces/validations';
 
 const validateUser = (req: Request, res: Response, next: NextFunction) => {
@@ -60,8 +60,20 @@ const validateProducts = (req: Request, res: Response, next: NextFunction) => {
   next();
 };
 
+const validateOrder = (req: Request, res: Response, next: NextFunction) => {
+  const { products } = req.body as Order;
+
+  const validationsOrder = validations.validateProducts(products);
+  if (validationsOrder.code) {
+    return res.status(validationsOrder.code).json({ error: validationsOrder.error });
+  }
+
+  next();
+};
+
 export default {
   validateUser,
   validateLogin,
   validateProducts,
+  validateOrder,
 };

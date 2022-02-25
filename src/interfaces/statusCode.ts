@@ -32,4 +32,7 @@ export enum MSG {
   AMOUNT_REQUIRED = 'Amount is required',
   AMOUNT_STRING = 'Amount must be a string',
   AMOUNT_LENGTH = 'Amount must be longer than 2 characters',
+  PRODUCTS_REQUIRED = 'Products is required',
+  PRODUCTS_ARRAY = 'Products must be an array of numbers',
+  PRODUCTS_ARRAY_EMPTY = 'Products can\'t be empty',
 }

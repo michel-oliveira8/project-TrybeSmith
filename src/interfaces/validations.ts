@@ -96,6 +96,20 @@ const validateAmount = (amount: string): CodeResponse => {
   return {};
 };
 
+const validateProducts = (products: []): CodeResponse => {
+  if (!products) {
+    return { code: StatusCode.BAD_REQUEST, error: MSG.PRODUCTS_REQUIRED };
+  }
+  if (!Array.isArray(products)) {
+    return { code: StatusCode.UNPROCCESSABLE_ENTITY, error: MSG.PRODUCTS_ARRAY };
+  }
+  if (!products.length) {
+    return { code: StatusCode.UNPROCCESSABLE_ENTITY, error: MSG.PRODUCTS_ARRAY_EMPTY };
+  }
+
+  return {};
+};
+
 export default {
   validateUsername,
   validateClasse,
@@ -104,4 +118,5 @@ export default {
   validateLogin,
   validateName,
   validateAmount,
+  validateProducts,
 };

@@ -18,6 +18,6 @@ app.post('/products', validations.validateProducts, productsController.createPro
 
 app.get('/products', productsController.getAll);
 
-app.post('/orders');
+app.post('/orders', validations.validateOrder);
 
 export default app;
