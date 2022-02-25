@@ -16,4 +16,6 @@ app.use(authorization.authorizationToken);
 
 app.post('/products', validations.validateProducts, productsController.createProducts);
 
+app.get('/products');
+
 export default app;
