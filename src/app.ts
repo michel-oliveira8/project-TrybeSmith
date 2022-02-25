@@ -3,6 +3,7 @@ import validations from './middleware/validation';
 import usersController from './controller/usersController';
 import authorization from './auth/authorization';
 import productsController from './controller/productsController';
+import orderController from './controller/orderController';
 
 const app = express();
 
@@ -18,6 +19,6 @@ app.post('/products', validations.validateProducts, productsController.createPro
 
 app.get('/products', productsController.getAll);
 
-app.post('/orders', validations.validateOrder);
+app.post('/orders', validations.validateOrder, orderController.createOrder);
 
 export default app;

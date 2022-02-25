@@ -63,7 +63,7 @@ const validateProducts = (req: Request, res: Response, next: NextFunction) => {
 const validateOrder = (req: Request, res: Response, next: NextFunction) => {
   const { products } = req.body as Order;
 
-  const validationsOrder = validations.validateProducts(products);
+  const validationsOrder = validations.validateOrder(products);
   if (validationsOrder.code) {
     return res.status(validationsOrder.code).json({ error: validationsOrder.error });
   }

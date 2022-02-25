@@ -15,6 +15,7 @@ export interface CodeResponse {
 }
 
 export interface EncodeResult {
+  id: number,
   token: string;
   expiresIn: number;
   algorithm: string;

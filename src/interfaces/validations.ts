@@ -96,7 +96,7 @@ const validateAmount = (amount: string): CodeResponse => {
   return {};
 };
 
-const validateProducts = (products: []): CodeResponse => {
+const validateOrder = (products: []): CodeResponse => {
   if (!products) {
     return { code: StatusCode.BAD_REQUEST, error: MSG.PRODUCTS_REQUIRED };
   }
@@ -118,5 +118,5 @@ export default {
   validateLogin,
   validateName,
   validateAmount,
-  validateProducts,
+  validateOrder,
 };
