@@ -1,5 +1,5 @@
 import { StatusCode, MSG } from './statusCode';
-import { CodeResponse } from './user';
+import { CodeResponse } from './interface';
 
 const validateUsername = (username: string): CodeResponse => {
   if (!username) {

@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from 'express';
-import { Products, User } from '../interfaces/user';
+import { Products, User } from '../interfaces/interface';
 import validations from '../interfaces/validations';
 
 const validateUser = (req: Request, res: Response, next: NextFunction) => {

@@ -1,4 +1,4 @@
-import { ProductsWithId } from '../interfaces/user';
+import { ProductsWithId } from '../interfaces/interface';
 import productsModel from '../models/productsModel';
 
 const create = async (product: ProductsWithId) => {
@@ -8,6 +8,13 @@ const create = async (product: ProductsWithId) => {
   return payload;
 };
 
+const getAll = async () => {
+  const result = await productsModel.getAll();
+
+  return result;
+};
+
 export default {
   create,
+  getAll,
 };

@@ -44,3 +44,7 @@ export interface Products {
 export interface ProductsWithId extends Products {
   id: number,
 }
+
+export interface GetAllProduct extends ProductsWithId {
+  orderId: number,
+}

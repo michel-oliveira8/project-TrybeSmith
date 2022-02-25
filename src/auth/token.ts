@@ -1,5 +1,5 @@
 import * as jwt from 'jsonwebtoken';
-import { Payload } from '../interfaces/user';
+import { Payload } from '../interfaces/interface';
 
 const secret = 'seusecretdetoken';
 

@@ -362,7 +362,7 @@ describe("3 - Crie um endpoint para o cadastro de produtos", () => {
   });
 });
 
-describe.only("4 - Crie um endpoint para a listagem de produtos", () => {
+describe("4 - Crie um endpoint para a listagem de produtos", () => {
   let token: string;
 
   beforeEach(async () => {
@@ -418,7 +418,7 @@ describe.only("4 - Crie um endpoint para a listagem de produtos", () => {
   });
 });
 
-describe("5 - Crie um endpoint para o cadastro de um pedido", () => {
+describe.skip("5 - Crie um endpoint para o cadastro de um pedido", () => {
   let token: string;
 
   beforeEach(async () => {
@@ -520,7 +520,7 @@ describe("5 - Crie um endpoint para o cadastro de um pedido", () => {
   });
 });
 
-describe("6 - Crie um endpoint para consultar um pedido", () => {
+describe.skip("6 - Crie um endpoint para consultar um pedido", () => {
   let token: string;
 
   beforeEach(async () => {
@@ -601,7 +601,7 @@ describe("6 - Crie um endpoint para consultar um pedido", () => {
   });
 });
 
-describe("7 - Crie um endpoint para listar todos os pedidos", () => {
+describe.skip("7 - Crie um endpoint para listar todos os pedidos", () => {
   let token: string;
 
   beforeEach(async () => {

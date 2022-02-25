@@ -1,4 +1,4 @@
-import { Login, UserWithId } from '../interfaces/user';
+import { Login, UserWithId } from '../interfaces/interface';
 import usersModel from '../models/usersModel';
 import Token from '../auth/token';
 import { MSG, StatusCode } from '../interfaces/statusCode';
