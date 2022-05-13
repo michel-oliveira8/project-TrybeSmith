@@ -29,6 +29,9 @@ O código para cadastro de pessoas usuárias deve ser criado por você utilizand
 
 - `npm install`
 
+### Rodar o servidor para realizar uma requisição:
+
+- `npm run dev`
 
 ### Executando testes
 
