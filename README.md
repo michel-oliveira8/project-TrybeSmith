@@ -30,7 +30,7 @@ O código para cadastro de pessoas usuárias deve ser criado por você utilizand
 - `npm install`
 
 
-# Executando testes
+### Executando testes
 
 - `npm test (testes implementados pela Trybe)`
 
