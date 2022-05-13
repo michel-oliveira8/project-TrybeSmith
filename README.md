@@ -27,7 +27,7 @@ Desenvolvido todas as camadas da aplicação (_Models_, _Service_ e _Controllers
 
 - `npm install`
 
-### Rodar o servidor para realizar uma requisição:
+### Rodar o servidor para realizar requisiçãoa a uma rota:
 
 - `npm run dev`
 
