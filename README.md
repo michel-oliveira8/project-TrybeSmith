@@ -9,6 +9,10 @@ Criado alguns _endpoints_ que irão ler e escrever em um banco de dados, utiliza
 
 Desenvolvido todas as camadas da aplicação (_Models_, _Service_ e _Controllers_) e, por meio dessa aplicação, sendo possível a realização das operações básicas que se pode fazer em um determinado banco de dados: Criação, Leitura, Atualização e Exclusão ou `CRUD`.
 
+## Tecnologias:
+
+ - `TypeScript, NodeJS, Express, MySQL, Jest `
+
 ### Clone o repositório
  - `git clone git@github.com:michel-oliveira8/project-TrybeSmith.git`
 
